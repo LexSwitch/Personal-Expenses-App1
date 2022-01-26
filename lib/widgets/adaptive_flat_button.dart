@@ -5,7 +5,7 @@ import 'package:flutter/cupertino.dart';
 
 class AdaptiveButton extends StatelessWidget {
   final String text;
-  final Function handler;
+  final Function() handler;
 
   AdaptiveButton(this.text, this.handler);
 
@@ -13,7 +13,7 @@ class AdaptiveButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Platform.isIOS
         ? CupertinoButton(
-            onPressed: handler(),
+            onPressed: handler,
             child: Text(
               text,
               style: TextStyle(fontWeight: FontWeight.bold),
@@ -25,7 +25,7 @@ class AdaptiveButton extends StatelessWidget {
               text,
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
-            onPressed: handler(),
+            onPressed: handler,
           );
   }
 }

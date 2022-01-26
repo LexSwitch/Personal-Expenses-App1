@@ -8,10 +8,15 @@ import 'package:personal_expenses/widgets/adaptive_flat_button.dart';
 class NewTransaction extends StatefulWidget {
   final Function addTx;
 
-  NewTransaction(this.addTx);
+  NewTransaction(this.addTx) {
+    print("Const new transaction");
+  }
 
   @override
-  State<NewTransaction> createState() => _NewTransactionState();
+  State<NewTransaction> createState() {
+    print("create new Transaction state");
+    return _NewTransactionState();
+  }
 }
 
 class _NewTransactionState extends State<NewTransaction> {
